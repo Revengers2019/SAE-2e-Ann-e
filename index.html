@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAGE | Fédération des Associations Générales Étudiantes</title>
+  <link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg"
+    type="image/jpeg">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans text-gray-900">
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <a href="#" class="flex items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/d3/Logo_FAGE.svg/langfr-250px-Logo_FAGE.svg.png"
+          alt="Logo FAGE" class="w-28">
+      </a>
+      <button class="lg:hidden text-white" id="navbar">☰</button>
+      <ul class="hidden lg:flex space-x-6 text-white" id="nav-element">
+        <li class="relative group">
+          <a href="#" class="hover:text-[#00aaff]">La Fage ▾</a>
+          <ul class="absolute hidden group-hover:block bg-white text-gray-700 mt-2 rounded shadow z-10">
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Qui sommes-nous</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">La gouvernance</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">L'équipe nationale</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Nos membres</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="hover:text-[#00aaff]">Nos idées</a></li>
+        <li><a href="#" class="hover:text-[#00aaff]">Innovation sociale</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CAROUSEL -->
+  <div class="relative w-full overflow-hidden">
+    <!-- Slides -->
+    <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+      <img src="https://f.hellowork.com/edito/sites/5/2024/01/FAGE-visuels-768x432.jpeg"
+        class="w-full h-[500px] object-cover flex-shrink-0" />
+      <img src="https://www.fage.org/ressources/imageBank/cache/13/560x-8618-Photo-N-3.jpeg"
+        class="w-full h-[500px] object-cover flex-shrink-0" />
+    </div>
+  </div>
+
+  <!-- BLOCS -->
+  <div class="max-w-6xl mx-auto my-10">
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <a href="https://www.fage.org/mes-droits/FAQ-defense-des-droits/">
+        <div class="bg-white rounded shadow p-6 h-full">
+          <h3 class="text-xl font-bold mb-2">Connaitre et défendre tes droits ?</h3>
+          <p>Parcoursup, Master, bourses, logement, santé... Nous avons des droits, défendons-les !</p>
+        </div>
+      </a>
+      <a href="https://sos-parcoursup.fr/">
+        <div class="bg-white rounded shadow p-6 h-full">
+          <h3 class="text-xl font-bold mb-2">SOS-Parcoursup</h3>
+          <p>Nous avons créé la plateforme SOS-Parcoursup ! Si tu rencontres un problème, contacte-nous !</p>
+        </div>
+      </a>
+    </div>
+    <a href="https://sos-monmaster.fr/" class="block max-w-md mx-auto md:mt-6">
+      <div class="bg-white rounded shadow p-6 h-full">
+        <h3 class="text-xl font-bold mb-2">SOS-MonMaster</h3>
+        <p>Afin que tu puisses avoir toutes les informations pour choisir ton master...</p>
+      </div>
+    </a>
+  </div>
+
+
+  <!-- CARDS -->
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+    <a href="https://www.fage.org/innovation-sociale/solidarite-etudiante/agorae-fage.htm3">
+      <div class="bg-white rounded shadow overflow-hidden">
+        <img src="https://www.fage.org/ressources/images/24/829,raw,visuel-agorae-pour-HP.jpg"
+          class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold">Innovation sociale</h5>
+          <p>Solidaires avec les AGORAé</p>
+        </div>
+      </div>
+    </a>
+    <a href="https://www.fage.org/election-presidentielle/enquete-presidentielle.htm">
+      <div class="bg-white rounded shadow overflow-hidden">
+        <img src="https://www.fage.org/ressources/imageBank/71/310x105-7627-MicrosoftTeams-image-22.png"
+          class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold">Représentation</h5>
+          <p>Présidentielle : une jeunesse oubliée ?</p>
+        </div>
+      </div>
+    </a>
+    <a href="https://www.fage.org/formations/gde.htm">
+      <div class="bg-white rounded shadow overflow-hidden">
+        <img src="https://www.fage.org/ressources/imageBank/21/310x105-750-GDE-site-fage.png"
+          class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold">Formation</h5>
+          <p>Le Guide de l'Elu.e</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-white mt-10">
+    <div class="max-w-7xl mx-auto p-10 grid md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="ft-title">La Fage</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-[#00aaff]">Qui sommes-nous ?</a></li>
+          <li><a href="#" class="hover:text-[#00aaff]">La gouvernance</a></li>
+          <li><a href="#" class="hover:text-[#00aaff]">L'équipe nationale</a></li>
+          <li><a href="#" class="hover:text-[#00aaff]">Nos membres</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="ft-title">Nos idées</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-[#00aaff]">Enseignement supérieur</a></li>
+          <li><a href="#" class="hover:text-[#00aaff]">Transition Écologique</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="ft-title">Innovation sociale</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-[#00aaff]">Prévention par les pairs</a></li>
+          <li><a href="#" class="hover:text-[#00aaff]">Santé et bien-être</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="ft-title">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="mailto:ethanmkp@gmail.com" class="hover:text-[#00aaff]">FAGE – Fédération des Associations
+              Générales Étudiantes</a></li>
+          <li>79 rue Périer 92120 Montrouge</li>
+          <li><a href="tel:+33140337070" class="hover:text-[#00aaff]">01.40.33.70.70</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center border-t border-gray-500 py-4 text-xs">
+      &copy; FAGE | Tous droits réservés
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
