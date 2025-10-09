@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAGE - Fédération des Associations Générales Étudiantes</title>
+    <link rel="icon" type="image/png" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/d3/Logo_FAGE.svg/1200px-Logo_FAGE.svg.png" alt="Logo FAGE">
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="la-fage.html">FAGE</a></li>
+                    <li><a href="nos-idees.html">Idées</a></li>
+                    <li><a href="mes-droits.html">Droits</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Carrousel en haut du site -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://i.f1g.fr/media/eidos/805x453_crop/2018/12/04/XVMdc79fa80-e98c-11e8-b830-09fa8f220334.jpg" alt="Slide 1 - La vie étudiante">
+               
+            </div>
+            <div class="carousel-slide">
+                <img src="https://f.hellowork.com/edito/sites/5/2024/01/FAGE-visuels-768x432.jpeg" alt="Slide 2 - Nos idées">
+               
+            </div>
+            <div class="carousel-slide">
+                <img src="https://www.aefinfo.fr/assets/medias/documents/5/2/522083_prv.jpeg" alt="Slide 3 - Événements">
+                 
+            </div>
+            <!-- Boutons de navigation -->
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+            <!-- Indicateurs -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section (adaptée, sans image fixe maintenant) -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h2>La vie étudiante, certains en parlent, nous la faisons.</h2>
+            <p>Première organisation étudiante représentative en France, la FAGE défend les intérêts des 300 000 étudiants membres.</p>
+            <a href="#apropos" class="btn">Découvrir la FAGE</a>
+        </div>
+    </section>
+
+    <!-- À Propos -->
+    <section id="apropos" class="section">
+        <div class="container">
+            <h2>Qui sommes-nous ?</h2>
+            <p>La FAGE est une fédération d'associations étudiantes fondée en 1989. Nous représentons les étudiants dans les instances nationales (CNESER, CROUS) et luttons pour une éducation accessible, inclusive et de qualité.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Gouvernance</h3>
+                    <p>Équipe nationale élue démocratiquement.</p>
+                </div>
+                <div class="card">
+                    <h3>Membres</h3>
+                    <p>Plus de 2 000 associations dans 35 villes.</p>
+                </div>
+                <div class="card">
+                    <h3>Instances</h3>
+                    <p>Présents au CNESER et CNOUS pour défendre vos droits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nos Idées -->
+    <section id="idees" class="section alternate">
+        <div class="container">
+            <h2>Nos Idées</h2>
+            <p>Propositions pour l'enseignement supérieur, le social, la jeunesse et la transition écologique.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Enseignement Supérieur</h3>
+                    <p>Démocratisation, financement et inclusion.</p>
+                    <a href="#">En savoir plus</a>
+                </div>
+                <div class="card">
+                    <h3>Social</h3>
+                    <p>Aides, logement, santé pour tous les étudiants.</p>
+                    <a href="#">En savoir plus</a>
+                </div>
+                <div class="card">
+                    <h3>Innovation Sociale</h3>
+                    <p>Campagnes de prévention et solidarité étudiante.</p>
+                    <a href="#">En savoir plus</a>
+                </div>
+                <div class="card">
+                    <h3>Transition Écologique</h3>
+                    <p>Engagement pour un campus durable.</p>
+                    <a href="#">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mes Droits -->
+    <section id="droits" class="section">
+        <div class="container">
+            <h2>Mes Droits</h2>
+            <p>FAQ et défense des droits : bourses, logement, stages, etc.</p>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Aides sociales et financements</button>
+                    <div class="accordion-content">
+                        <p>Informations sur les bourses CROUS et aides spécifiques.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Logement étudiant</button>
+                    <div class="accordion-content">
+                        <p>Droits au logement universitaire et VISALE.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Santé et sécurité sociale</button>
+                    <div class="accordion-content">
+                        <p>Accès à la santé pour les étudiants.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">Contactez-nous pour aide</a>
+        </div>
+    </section>
+
+    <!-- Événements -->
+    <section id="evenements" class="section alternate">
+        <div class="container">
+            <h2>Événements</h2>
+            <div class="grid">
+                <div class="card event">
+                    <h3>Congrès National</h3>
+                    <p>Assemblée générale annuelle.</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUiA_kfTRahqsao4wLBZCcbbhENHfWrfmTA&s" alt="Congrès">
+                </div>
+                <div class="card event">
+                    <h3>Université d'Été "Les Assoliades"</h3>
+                    <p>Formation et détente pour militants.</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUiA_kfTRahqsao4wLBZCcbbhENHfWrfmTA&s" alt="Assoliades">
+                </div>
+                <div class="card event">
+                    <h3>Journées de l'Innovation Sociale</h3>
+                    <p>Échanges sur les projets solidaires.</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUiA_kfTRahqsao4wLBZCcbbhENHfWrfmTA&s" alt="JNIS">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actualités -->
+    <section id="actualites" class="section">
+        <div class="container">
+            <h2>Actualités Récentes</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUiA_kfTRahqsao4wLBZCcbbhENHfWrfmTA&s" alt="Coût de la rentrée">
+                    <h3>Coût de la rentrée 2025</h3>
+                    <p>Analyse du coût de la vie étudiante en hausse.</p>
+                    <a href="#">Lire plus</a>
+                </article>
+                <article class="news-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUiA_kfTRahqsao4wLBZCcbbhENHfWrfmTA&s" alt="Élections CNESER">
+                    <h3>Élections CNESER 2025-2027</h3>
+                    <p>Résultats et implications pour les étudiants.</p>
+                    <a href="#">Lire plus</a>
+                </article>
+                <article class="news-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUiA_kfTRahqsao4wLBZCcbbhENHfWrfmTA&s" alt="Baromètre précarité">
+                    <h3>Baromètre de la précarité étudiante</h3>
+                    <p>Chiffres alarmants sur la situation des étudiants.</p>
+                    <a href="#">Lire plus</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Contact</h3>
+                    <p>Siège : Montrouge, France<br>Email : contact@fage.org<br>Tél : 01 23 45 67 89</p>
+                </div>
+                <div>
+                    <h3>Liens Utiles</h3>
+                    <ul>
+                        <li><a href="#">Services aux associations</a></li>
+                        <li><a href="#">Boutique FAGE</a></li>
+                        <li><a href="#">Espace Presse</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Réseaux Sociaux</h3>
+                    <p><a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 FAGE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

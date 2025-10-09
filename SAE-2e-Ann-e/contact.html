@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - FAGE</title>
+    <link rel="icon" type="image/png" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (même) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/d3/Logo_FAGE.svg/1200px-Logo_FAGE.svg.png" alt="Logo FAGE">
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="la-fage.html">FAGE</a></li>
+                    <li><a href="nos-idees.html">Idées</a></li>
+                    <li><a href="mes-droits.html">Droits</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p>Pour toute question, défense de droits ou adhésion.</p>
+                            <button class="btn-back" onclick="window.location.href='index.html'">Retour à l'accueil</button>
+
+        </div>
+    </section>
+
+    <!-- Infos contact -->
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <h3>Siège Social</h3>
+                    <p>Montrouge, France<br>Email : contact@fage.org<br>Tél : 01 23 45 67 89</p>
+                </div>
+                <div class="card">
+                    <h3>Défense des Droits</h3>
+                    <p>Contact spécifique : defense@fage.org</p>
+                </div>
+                <div class="card">
+                    <h3>Presse</h3>
+                    <p>presse@fage.org</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire (simple, sans backend) -->
+    <section class="section alternate">
+        <div class="container">
+            <h2>Formulaire de Contact</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Votre Nom" required>
+                <input type="email" placeholder="Votre Email" required>
+                <select required>
+                    <option value="">Sujet</option>
+                    <option>Défense des droits</option>
+                    <option>Adhésion</option>
+                    <option>Presse</option>
+                    <option>Autre</option>
+                </select>
+                <textarea placeholder="Votre Message" required></textarea>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer (même) -->
+    <footer class="footer">
+        <!-- Même footer -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple form submit alert (démo)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message envoyé ! (Démo)');
+        });
+    </script>
+</body>
+</html>
