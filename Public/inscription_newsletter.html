@@ -51,6 +51,16 @@
     </ul>
 </nav>
 
+<script>
+    // Toggle menu mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
 <main>
     <a href="articles/read.html" class="text title-block">
         <div class="read-title title-block">
