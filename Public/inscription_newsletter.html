@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Actualité | CP et DP</title>
+    <link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg"
+          type="image/jpeg">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/App/style.css">
+    <link rel="stylesheet" href="styles/template.css">
+    <link rel="stylesheet" href="styles/inscription_newsletter.css">
+</head>
+<body>
+
+<nav class="fixed w-full z-50 bg-gradient-to-r from-blue-500 to-blue-400 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4 lg:py-2">
+        <a href="#" class="flex items-center">
+            <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE" class="w-28 lg:w-20">
+        </a>
+
+        <!-- Bouton hamburger pour mobile -->
+        <div class="lg:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <!-- Trois barres -->
+                <span class="title-block w-6 h-0.5 bg-white mb-1"></span>
+                <span class="title-block w-6 h-0.5 bg-white mb-1"></span>
+                <span class="title-block w-6 h-0.5 bg-white"></span>
+            </button>
+        </div>
+
+        <!-- Menu desktop -->
+        <ul class="hidden lg:flex space-x-8 text-white font-medium">
+            <li><a href="index.html" class="hover:text-gray-200">Accueil</a></li>
+            <li><a href="Fage.html" class="hover:text-gray-200">La FAGE</a></li>
+            <li><a href="Droit.html" class="hover:text-gray-200">Nos Droits</a></li>
+            <li><a href="formationFage.html" class="hover:text-gray-200">Formation Fage</a></li>
+            <li><a href="guideElu.html" class="hover:text-gray-200">Le Guide</a></li>
+            <li><a href="actualites.html" class="hover:text-gray-200">Les Actualités</a></li>
+        </ul>
+    </div>
+
+    <!-- Menu mobile -->
+    <ul id="mobile-menu" class="lg:hidden hidden flex-col bg-gradient-to-r from-blue-500 to-blue-400 text-white font-medium px-4 pt-2 pb-4 space-y-2">
+        <li><a href="index.html" class="block hover:text-gray-200">Accueil</a></li>
+        <li><a href="Fage.html" class="block hover:text-gray-200">La FAGE</a></li>
+        <li><a href="Droit.html" class="block hover:text-gray-200">Nos Droits</a></li>
+        <li><a href="formationFage.html" class="block hover:text-gray-200">Formation Fage</a></li>
+        <li><a href="guideElu.html" class="block hover:text-gray-200">Le Guide</a></li>
+    </ul>
+</nav>
+
+<main>
+    <a href="articles/read.html" class="text title-block">
+        <div class="read-title title-block">
+            <h2>Actualité | CP et DP</h2>
+            <div class="center">
+            </div>
+            <p>
+                Indicateur du coût de la rentrée étudiante 2025 <br/><br/>
+                Cette nouvelle rentrée se présente comme un coup de massue supplémentaire pour le public étudiant. Les
+                constats de ce 23ème indicateur du coût de la rentrée étudiante sont dramatiques et intimement liés à un
+                contexte évident d’instabilité politique. Via cet indicateur à la méthode fiable et complète, la FAGE
+                tient à mettre en avant les chiffres qui reflètent la situation de pauvreté sans appel connue par des
+                milliers de jeunes.
+            </p>
+        </div>
+    </a>
+    <div class="pages">
+        <a href="https://www.fage.org/archives-newsletters/" class="text-image outline-block">
+            <div class="read-more">
+                <h2>À découvrir</h2>
+                <p>Retrouvez les précédentes éditions de la newsletter de la FAGE</p>
+            </div>
+            <img src="" alt=" ">
+        </a>
+    </div>
+    <br/>
+    <div>
+        <h2> Inscription à la newsletter de la FAGE </h2>
+        <p> Notre newsletter vous informe sur l'actualité de la FAGE et de son réseau. </p>
+        <p> N'attendez plus et abonnez-vous dès à présent ! </p>
+    </div>
+    <br/>
+    <hr style="height:1px;border:none;color:#333;background-color:#333;opacity: 0.5;" />
+    <br/>
+    <br/>
+    <div class="center">
+        <form id="form-inscription" class="form outline-block" method="post">
+            <p class="mandatory">* Champs obligatoires.</p>
+            <div class="inline">
+                <div class="form-input">
+                    <input type="text" id="fname" name="fname" required>
+                    <label for="fname">Prénom<span class="mandatory">*</span></label>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="lname" name="lname" required>
+                    <label for="lname">Nom<span class="mandatory">*</span></label>
+                </div>
+            </div>
+            <div class="form-input">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email<span class="mandatory">*</span></label>
+            </div>
+            <div class="form-input">
+                <input type="text" id="organisation" name="organisation">
+                <label for="organisation">Organisation</label>
+            </div>
+            <div class="form-button">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer class="text-white mt-10 bg-gradient-to-r from-blue-500 to-blue-400">
+    <div class="max-w-7xl mx-auto p-10 grid md:grid-cols-4 gap-8">
+        <div>
+            <h3 class="ft-title font-bold">La Fage</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="Fage.html" class="hover:text-white">Qui sommes-nous ?</a></li>
+                <li><a href="Fage.html" class="hover:text-white">La Féderations </a></li>
+                <li><a href="Fage.html" class="hover:text-white">L'équipe nationale</a></li>
+                <li><a href="Fage.html" class="hover:text-white">Nos membres</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="ft-title font-bold">Nos Droits</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="Droit.html" class="hover:text-white">La défense des droits</a></li>
+                <li><a href="Droit.html" class="hover:text-white">Foire aux questions</a></li>
+                <li><a href="Droit.html" class="hover:text-white">La gouvernance et l’action de la FAGE</a></li>
+
+            </ul>
+        </div>
+        <div>
+            <h3 class="ft-title font-bold">Vos Pages</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-white">...</a></li>
+                <li><a href="#" class="hover:text-white">...</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="ft-title font-bold">Contact</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="mailto:contact@fage.org" class="hover:text-white">contact@fage.org</a></li>
+                <li>79 rue Périer 92120 Montrouge</li>
+                <li><a href="tel:+33140337070" class="hover:text-white">01.40.33.70.70</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../App/script.js"></script>
+
+</body>
+</html>

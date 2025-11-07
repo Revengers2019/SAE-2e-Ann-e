@@ -1,0 +1,23 @@
+.title {
+    font-family: "Inter Display Medium", sans-serif;
+
+    .date {
+        margin-bottom: 1rem;
+    }
+
+    .info {
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+}
+
+.article-body {
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+.bold {
+    font-weight: bolder;
+    color: black;
+}

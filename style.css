@@ -309,7 +309,7 @@ a:focus {
     justify-content: space-between;
 }
 
-#footer .block {
+#footer .title-block {
     flex: 1 1 200px;
     margin-bottom: var(--spacing-default);
 }
@@ -351,10 +351,10 @@ a:focus {
 
 /* Responsive Footer */
 @media (max-width: 991px) {
-    #footer .block { flex: 1 1 45%; }
+    #footer .title-block { flex: 1 1 45%; }
 }
 @media (max-width: 575px) {
-    #footer .block { flex: 1 1 100%; }
+    #footer .title-block { flex: 1 1 100%; }
 }
 
 @media print {
