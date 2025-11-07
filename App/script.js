@@ -17,4 +17,14 @@ nav.addEventListener("click", () => {
 
 setInterval(nextSlide, 4000);
 
+const reveals = document.querySelectorAll('.reveal');
+function showReveals() { for (const r of reveals) { const rect = r.getBoundingClientRect(); if (rect.top < window.innerHeight - 80) r.classList.add('show'); } }
+window.addEventListener('scroll', showReveals);
+window.addEventListener('load', () => { showReveals(); });
 
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});

@@ -8,26 +8,7 @@
   <link rel="icon" href="https://img.freepik.com/vecteurs-premium/lettre-f-bleue-blanche-est-fond-bleu_462839-1528.jpg"
     type="image/jpeg">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style>
-    .hero-gradient {
-      background: linear-gradient(135deg, #0077cc, #00aaff);
-    }
-
-    .carousel {
-      will-change: transform;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: all .6s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: none;
-    }
-  </style>
+  <link rel="stylesheet" href="../App/style.css">
 </head>
 
 <body class="font-sans text-gray-900 bg-gray-50">
@@ -284,12 +265,7 @@
     </div>
   </footer>
 
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-    function showReveals() { for (const r of reveals) { const rect = r.getBoundingClientRect(); if (rect.top < window.innerHeight - 80) r.classList.add('show'); } }
-    window.addEventListener('scroll', showReveals);
-    window.addEventListener('load', () => { showReveals(); });
-  </script>
+  <script src="../App/script.js"></script>
 
 </body>
 
