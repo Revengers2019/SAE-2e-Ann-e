@@ -33,19 +33,52 @@
 <body class="font-sans text-gray-900 bg-gray-50">
 
   <!-- NAVBAR -->
-  <nav class="fixed w-full z-50 bg-gradient-to-r from-blue-500 to-blue-400 text-white shadow-lg">
+<nav class="fixed w-full z-50 bg-gradient-to-r from-blue-500 to-blue-400 text-white shadow-lg">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4 lg:py-2">
-      <a href="#" class="flex items-center">
-        <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE"
-          class="w-28 lg:w-20">
-      </a>
-      <ul class="hidden lg:flex space-x-8 text-white font-medium">
-        <li><a href="index.html" class="hover:text-gray-200">Accueil</a></li>
-        <li><a href="Fage.html" class="hover:text-gray-200">La FAGE</a></li>
-        <li><a href="Droit.html" class="hover:text-gray-200">Nos Droits</a></li>
-      </ul>
+        <a href="#" class="flex items-center">
+            <img src="https://ageparis.org/agepwebcontent/uploads/2013/01/fage-blanc-logo-min.png" alt="Logo FAGE" class="w-28 lg:w-20">
+        </a>
+
+        <!-- Bouton hamburger pour mobile -->
+        <div class="lg:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <!-- Trois barres -->
+                <span class="block w-6 h-0.5 bg-white mb-1"></span>
+                <span class="block w-6 h-0.5 bg-white mb-1"></span>
+                <span class="block w-6 h-0.5 bg-white"></span>
+            </button>
+        </div>
+
+        <!-- Menu desktop -->
+        <ul class="hidden lg:flex space-x-8 text-white font-medium">
+            <li><a href="index.html" class="hover:text-gray-200">Accueil</a></li>
+            <li><a href="Fage.html" class="hover:text-gray-200">La FAGE</a></li>
+            <li><a href="Droit.html" class="hover:text-gray-200">Nos Droits</a></li>
+            <li><a href="formationFage.html" class="hover:text-gray-200 font-bold">Formation Fage</a></li>
+            <li><a href="guideElu.html" class="hover:text-gray-200">Le Guide</a></li>
+        </ul>
     </div>
-  </nav>
+
+    <!-- Menu mobile -->
+    <ul id="mobile-menu" class="lg:hidden hidden flex-col bg-gradient-to-r from-blue-500 to-blue-400 text-white font-medium px-4 pt-2 pb-4 space-y-2">
+        <li><a href="index.html" class="block hover:text-gray-200">Accueil</a></li>
+        <li><a href="Fage.html" class="block hover:text-gray-200">La FAGE</a></li>
+        <li><a href="Droit.html" class="block hover:text-gray-200">Nos Droits</a></li>
+        <li><a href="formationFage.html" class="block hover:text-gray-200 font-bold">Formation Fage</a></li>
+        <li><a href="guideElu.html" class="block hover:text-gray-200">Le Guide</a></li>
+    </ul>
+</nav>
+
+<script>
+    // Toggle menu mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
 
   <!-- CAROUSEL FULL SCREEN -->
   <section id="accueil" class="relative h-screen overflow-hidden pt-20">
