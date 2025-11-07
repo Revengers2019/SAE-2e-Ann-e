@@ -1,0 +1,678 @@
+/* 🌐 Configuration générale du site */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 🗺️ Carte Leaflet */
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin: 20px 0 20px 20px; /* un peu d’espace autour sauf à gauche */
+  float: left;
+}
+
+/* Carte responsive */
+@media (max-width: 768px) {
+  #map {
+    height: 300px; /* plus petite sur mobile */
+    float: none;
+    margin: 10px 0;
+  }
+}
+
+/* 🧭 Légende de la carte */
+.legend {
+  padding: 10px;
+  background: white;
+  position: absolute;
+  top: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.legend a {
+  color: #0078ff;
+  text-decoration: none;
+}
+
+.legend a:hover {
+  text-decoration: underline;
+}
+
+/* 🖼️ Images principales */
+.img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Tailles d’image selon l’écran */
+@media (max-width: 992px) {
+  .img { max-height: 400px; }
+}
+@media (max-width: 768px) {
+  .img { max-height: 300px; }
+}
+@media (max-width: 480px) {
+  .img { max-height: 200px; }
+}
+
+/* 🦸 Section principale avec image de fond */
+.hero-section {
+  background-image: url('https://cdn.jobs.makesense.org/projects/5494/project/1670855179576lbkw17p5.png');
+  background-size: cover;
+  background-position: center;
+}
+.hero-section2 {
+  background-image: url('https://www.excelia-group.fr/sites/excelia-group.fr/files/2020-03/vie-associative-excelia.jpg');
+  background-size: cover;
+  background-position: center;
+}
+/* 📸 Images dans les cartes */
+.card-img {
+  width: 200px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img1 {
+  background-image: url('https://www.fage.org/ressources/images/239/7521-560x-manif.jpeg');
+}
+
+.img2 {
+  background-image: url('https://cdn-s-www.republicain-lorrain.fr/images/AC2D77C6-6BCC-4EA1-91B5-DB24AAAE2459/NW_raw/elisa-mangeolle-porte-parole-de-la-federation-des-associations-generales-etudiantes-(fage)-1746555232.jpg');
+}
+.img3 {
+  background-image: url('https://st2.depositphotos.com/1720162/9866/v/450/depositphotos_98663130-stock-illustration-thin-line-design-concept-for.jpg');
+}
+
+.img4 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDgkkV2rwTwES1IOj0ksIS4ZCyrl3MChFHQ&s');
+}
+/* 🎥 Conteneur vidéo YouTube */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 📌 Barre latérale fixe */
+.sticky-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+/* 🦶 Pied de page */
+footer {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+}
+/* Navbar FAGE ultra simple et centrée */
+
+
+/* Menu burger */
+.menu-toggle { display: none; }
+.menu-icon { display: none; cursor: pointer; font-size: 1.8rem; color: white; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon { display: block; }
+  .navbar-links {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .navbar-links li { margin: 8px 0; }
+  .menu-toggle:checked + .menu-icon + .navbar-links { display: flex; }
+}
+
+
+
+
+nav, footer{
+    background-color: #006D8B;
+}
+
+/* ft : footer */
+.ft-title{
+    color: #00aaff;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+/* --- VARIABLES DE COULEUR (pour cohérence) --- */
+:root {
+    --color-nav-bg: #4f687e; /* Couleur foncée de la Navbar/Fond */
+    --color-link-hover: #00aaff; /* Couleur d'accentuation (bleu clair) */
+    --color-footer-bg: #f7f7f7; /* Gris clair du Footer */
+    --color-footer-text: #333; /* Texte du Footer */
+}
+
+/* --- GÉNÉRAL (Réinitialisation minimaliste) --- */
+* {
+    box-sizing: border-box;
+}
+
+/* --- NAVIGATION BAR --- */
+.navbar {
+    background-color: var(--color-nav-bg);
+    width: 100%; /* Pleine largeur */
+    color: white;
+}
+
+.navbar-container {
+    max-width: 1280px; /* Équivalent de max-w-7xl de Tailwind */
+    margin: 0 auto; /* Équivalent de mx-auto */
+    padding: 1rem; /* Équivalent de p-4 */
+    display: flex; /* Équivalent de flex */
+    justify-content: space-between; /* Équivalent de justify-between */
+    align-items: center; /* Équivalent de items-center */
+}
+
+.navbar-logo .logo-img {
+    width: 7rem; /* Équivalent de w-28 */
+    height: auto;
+}
+
+.navbar-menu {
+    display: flex; /* Équivalent de flex */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem; /* Équivalent de space-x-6 */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-link-hover); /* Équivalent de hover:text-[#00aaff] */
+}
+
+/* Bouton hamburger (caché par défaut sur grand écran) */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    width: 100%; /* Pleine largeur demandée */
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
+    margin-top: 2.5rem; /* Équivalent de mt-10 */
+}
+
+.footer-content {
+    max-width: 1280px; /* Contenu centré */
+    margin: 0 auto;
+    padding: 2.5rem; /* Équivalent de p-10 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes par défaut sur mobile */
+    gap: 2rem; /* Équivalent de gap-8 */
+}
+
+.footer-title {
+    font-size: 1.25rem; /* Équivalent de text-xl */
+    font-weight: 600; /* Équivalent de font-semibold */
+    margin-bottom: 0.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Équivalent de space-y-2 */
+    font-size: 0.875rem; /* Équivalent de text-sm */
+}
+
+.footer-link {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--color-link-hover);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ccc; /* Équivalent de border-t border-gray-500 */
+    padding: 1rem 0; /* Équivalent de py-4 */
+    font-size: 0.75rem; /* Équivalent de text-xs */
+    background-color: #eee; /* Léger fond pour la barre de copyright */
+}
+
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+
+/* Pour les écrans plus grands (similaire à 'lg' ou 'md' dans Tailwind) */
+@media (min-width: 1024px) {
+    /* Navigation */
+    .navbar-toggle {
+        display: none; /* Cache le bouton hamburger */
+    }
+    .navbar-menu {
+        display: flex; /* Affiche le menu en ligne */
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur grand écran */
+    }
+}
+#mini-map {
+  pointer-events: auto; /* permet de cliquer sur les markers */
+  border-radius: 0.5rem; /* coins arrondis pour suivre le bloc */
+}
+
+/* Code JS pour gérer le menu hamburger sur mobile (à ajouter dans script.js) */
+
+
+ /* Style CSS pour le menu mobile (à ajouter dans style.css) */
+ @media (max-width: 1023px) {
+     .navbar-menu {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         position: absolute;
+         top: 60px; /* Hauteur approximative de la nav */
+         left: 0;
+         background-color: var(--color-nav-bg);
+         padding: 1rem 0;
+         z-index: 1000;
+     }/* 🌐 Configuration générale du site */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 🗺️ Carte Leaflet */
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin: 20px 0 20px 20px; /* un peu d’espace autour sauf à gauche */
+  float: left;
+}
+
+/* Carte responsive */
+@media (max-width: 768px) {
+  #map {
+    height: 300px; /* plus petite sur mobile */
+    float: none;
+    margin: 10px 0;
+  }
+}
+
+/* 🧭 Légende de la carte */
+.legend {
+  padding: 10px;
+  background: white;
+  position: absolute;
+  top: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.legend a {
+  color: #0078ff;
+  text-decoration: none;
+}
+
+.legend a:hover {
+  text-decoration: underline;
+}
+
+/* 🖼️ Images principales */
+.img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Tailles d’image selon l’écran */
+@media (max-width: 992px) {
+  .img { max-height: 400px; }
+}
+@media (max-width: 768px) {
+  .img { max-height: 300px; }
+}
+@media (max-width: 480px) {
+  .img { max-height: 200px; }
+}
+
+/* 🦸 Section principale avec image de fond */
+.hero-section {
+  background-image: url('https://cdn.jobs.makesense.org/projects/5494/project/1670855179576lbkw17p5.png');
+  background-size: cover;
+  background-position: center;
+}
+.hero-section2 {
+  background-image: url('https://www.excelia-group.fr/sites/excelia-group.fr/files/2020-03/vie-associative-excelia.jpg');
+  background-size: cover;
+  background-position: center;
+}
+/* 📸 Images dans les cartes */
+.card-img {
+  width: 200px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img1 {
+  background-image: url('https://www.fage.org/ressources/images/239/7521-560x-manif.jpeg');
+}
+
+.img2 {
+  background-image: url('https://cdn-s-www.republicain-lorrain.fr/images/AC2D77C6-6BCC-4EA1-91B5-DB24AAAE2459/NW_raw/elisa-mangeolle-porte-parole-de-la-federation-des-associations-generales-etudiantes-(fage)-1746555232.jpg');
+}
+.img3 {
+  background-image: url('https://st2.depositphotos.com/1720162/9866/v/450/depositphotos_98663130-stock-illustration-thin-line-design-concept-for.jpg');
+}
+
+.img4 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDgkkV2rwTwES1IOj0ksIS4ZCyrl3MChFHQ&s');
+}
+/* 🎥 Conteneur vidéo YouTube */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 📌 Barre latérale fixe */
+.sticky-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+/* 🦶 Pied de page */
+footer {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+}
+/* Navbar FAGE ultra simple et centrée */
+
+
+/* Menu burger */
+.menu-toggle { display: none; }
+.menu-icon { display: none; cursor: pointer; font-size: 1.8rem; color: white; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon { display: block; }
+  .navbar-links {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .navbar-links li { margin: 8px 0; }
+  .menu-toggle:checked + .menu-icon + .navbar-links { display: flex; }
+}
+
+
+
+
+nav, footer{
+    background-color: #006D8B;
+}
+
+/* ft : footer */
+.ft-title{
+    color: #00aaff;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+/* --- VARIABLES DE COULEUR (pour cohérence) --- */
+:root {
+    --color-nav-bg: #4f687e; /* Couleur foncée de la Navbar/Fond */
+    --color-link-hover: #00aaff; /* Couleur d'accentuation (bleu clair) */
+    --color-footer-bg: #f7f7f7; /* Gris clair du Footer */
+    --color-footer-text: #333; /* Texte du Footer */
+}
+
+/* --- GÉNÉRAL (Réinitialisation minimaliste) --- */
+* {
+    box-sizing: border-box;
+}
+
+/* --- NAVIGATION BAR --- */
+.navbar {
+    background-color: var(--color-nav-bg);
+    width: 100%; /* Pleine largeur */
+    color: white;
+}
+
+.navbar-container {
+    max-width: 1280px; /* Équivalent de max-w-7xl de Tailwind */
+    margin: 0 auto; /* Équivalent de mx-auto */
+    padding: 1rem; /* Équivalent de p-4 */
+    display: flex; /* Équivalent de flex */
+    justify-content: space-between; /* Équivalent de justify-between */
+    align-items: center; /* Équivalent de items-center */
+}
+
+.navbar-logo .logo-img {
+    width: 7rem; /* Équivalent de w-28 */
+    height: auto;
+}
+
+.navbar-menu {
+    display: flex; /* Équivalent de flex */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem; /* Équivalent de space-x-6 */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-link-hover); /* Équivalent de hover:text-[#00aaff] */
+}
+
+/* Bouton hamburger (caché par défaut sur grand écran) */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    width: 100%; /* Pleine largeur demandée */
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
+    margin-top: 2.5rem; /* Équivalent de mt-10 */
+}
+
+.footer-content {
+    max-width: 1280px; /* Contenu centré */
+    margin: 0 auto;
+    padding: 2.5rem; /* Équivalent de p-10 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes par défaut sur mobile */
+    gap: 2rem; /* Équivalent de gap-8 */
+}
+
+.footer-title {
+    font-size: 1.25rem; /* Équivalent de text-xl */
+    font-weight: 600; /* Équivalent de font-semibold */
+    margin-bottom: 0.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Équivalent de space-y-2 */
+    font-size: 0.875rem; /* Équivalent de text-sm */
+}
+
+.footer-link {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--color-link-hover);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ccc; /* Équivalent de border-t border-gray-500 */
+    padding: 1rem 0; /* Équivalent de py-4 */
+    font-size: 0.75rem; /* Équivalent de text-xs */
+    background-color: #eee; /* Léger fond pour la barre de copyright */
+}
+
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+
+/* Pour les écrans plus grands (similaire à 'lg' ou 'md' dans Tailwind) */
+@media (min-width: 1024px) {
+    /* Navigation */
+    .navbar-toggle {
+        display: none; /* Cache le bouton hamburger */
+    }
+    .navbar-menu {
+        display: flex; /* Affiche le menu en ligne */
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur grand écran */
+    }
+}
+#mini-map {
+  pointer-events: auto; /* permet de cliquer sur les markers */
+  border-radius: 0.5rem; /* coins arrondis pour suivre le bloc */
+}
+
+/* Code JS pour gérer le menu hamburger sur mobile (à ajouter dans script.js) */
+
+
+ /* Style CSS pour le menu mobile (à ajouter dans style.css) */
+ @media (max-width: 1023px) {
+     .navbar-menu {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         position: absolute;
+         top: 60px; /* Hauteur approximative de la nav */
+         left: 0;
+         background-color: var(--color-nav-bg);
+         padding: 1rem 0;
+         z-index: 1000;
+     }
+     .navbar-menu.active {
+         display: flex;
+     }
+     .navbar-menu li {
+         width: 100%;
+         text-align: center;
+         padding: 0.5rem 0;
+     }
+     .navbar-toggle {
+         display: block; /* Affiche le bouton hamburger */
+     }
+     .navbar-container {
+         padding: 0.5rem 1rem;
+     }
+ }
+ .nav-footer-color {
+    background-color: #00aaff;
+}
+
+     .navbar-menu.active {
+         display: flex;
+     }
+     .navbar-menu li {
+         width: 100%;
+         text-align: center;
+         padding: 0.5rem 0;
+     }
+     .navbar-toggle {
+         display: block; /* Affiche le bouton hamburger */
+     }
+     .navbar-container {
+         padding: 0.5rem 1rem;
+     }
+ }
+ .nav-footer-color {
+    background-color: #00aaff;
+}
